@@ -10,6 +10,10 @@ label: "Share"
 
 platforms:
   -
+   type: Whatsapp
+   icon: "fab fa-whatsapp"
+   link: "whatsapp://send?text=URL"
+  -
     type: Twitter
     icon: "fab fa-twitter"
     link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
@@ -21,9 +25,3 @@ platforms:
     type: Telegram
     icon: "fab fa-telegram"
     link: "https://telegram.me/share?text=TITLE&url=URL"
-
-  # Uncomment below if you need to.
-  # -
-  #   type: Weibo
-  #   icon: "fab fa-weibo"
-  #   link: "http://service.weibo.com/share/share.php?title=TITLE&url=URL"

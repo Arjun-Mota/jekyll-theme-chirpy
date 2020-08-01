@@ -8,35 +8,43 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Chirpy                          # the main title
+title: Arjun Mota's Blog                     # the main title
 
-tagline: A text-focused Jekyll theme.  # it will display as the sub-title
+tagline: AI | Machine Learning | Data-Science | Big-Data | Statistical Analysis | Data Visualization | Software-Engineering | Cloud Computing | IoT | My Projects and Experiences | Misc |   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  Arjun Mota's portfolio representing his 
+  background, projects, interests and various blog posts 
+  on topics ranging from AI, Machine Learning, Deep Learning, 
+  Data Science, Statistical Analysis, Data Analytics, Data Visualization,
+  Cloud Computing, Databases (SQL, NoSQL), Clean coding, Big data,
+  Analytics, IOT, Hiking, Treking, Travelling, Tableau, Python, Java, Software Engineering,
+  Microsoft Power Bi and some regarding current global trends, genetics, robotics, and
+   3D Printing as well.
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'protocol://domain'
+url: 'https://arjun-mota.github.io'
 
-author: your_full_name                  # change to your full name
+author: Arjun Mota                  # change to your full name
 
 avatar: /assets/img/sample/avatar.jpg   # support internet resources
 
 github:
-  username: github_username             # change to your github username
+  username: arjun-mota             # change to your github username
 
-twitter:
-  username: twitter_username            # change to your twitter username
+linkedin:
+  username: arjun-mota
+
+hackerrank:
+  username: Arjun_Mota
 
 social:
-  name: your_full_name                  # it will shows as the copyright owner in Footer
-  email: example@doamin.com             # change to your email address
+  name: Arjun Mota                  # it will shows as the copyright owner in Footer
+  email: arjunmota@hotmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://www.linkedin.com/in/arjun-mota/      # change to your linkedin homepage
+    - https://github.com/Arjun-Mota       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -49,7 +57,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Asia/Kolkata
 
 google_analytics:
   # Fill with your Google Analytics ID
@@ -110,7 +118,7 @@ defaults:
       type: posts
     values:
       layout: post
-      comments: true    # Enable comments in posts.
+      comments: false    # Enable comments in posts.
       toc: true         # Display TOC column in posts.
       location: Post
       breadcrumb:

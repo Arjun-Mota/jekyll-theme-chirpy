@@ -55,8 +55,7 @@
 
 </div><!-- #nav-wrapper -->
 
-<div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4">
-
+<div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4">  
   {% if site.theme_mode == "dual" %}
   <span id="mode-toggle-wrapper">
     {% include mode-toggle.html %}
@@ -65,14 +64,17 @@
   {% endif %}
 
   <a href="https://github.com/{{ site.github.username }}" target="_blank">
-    <i class="fab fa-github-alt"></i>
+    <i class="fab fa-github"></i>
   </a>
-  <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank">
-    <i class="fab fa-twitter"></i>
+  <a href="https://www.linkedin.com/in/{{ site.linkedin.username }}" target="_blank">
+    <i class="fab fa-linkedin"></i>
   </a>
+<a href="https://www.hackerrank.com/{{ site.hackerrank.username }}" target="_blank">
+  <i class="fab fa-hackerrank"></i>
+</a>
   {% assign email = site.social.email | split: '@' %}
   <a href="javascript:window.open('mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'))">
-    <i class="fas fa-envelope"></i>
+    <i class="fas fa-at"></i>
   </a>
   <a href="{{ site.baseurl }}/feed.xml" target="_blank">
     <i class="fas fa-rss"></i>

@@ -61,7 +61,7 @@ body {
   background: var(--body-bg);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
-  font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
+  font-family: 'Josefin Sans','Titillium Web','Source Sans Pro', 'Microsoft Yahei', sans-serif;
 }
 
 /*--- sidebar layout ---*/
@@ -75,6 +75,7 @@ $sidebar-display: "sidebar-display";
 #sidebar {
   @include pl-pr(0);
   position: fixed;
+  font-family: 'Titillium Web','Source Sans Pro', 'Microsoft Yahei', sans-serif;
   top: 0;
   left: 0;
   height: 100%;
