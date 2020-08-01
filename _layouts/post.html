@@ -19,16 +19,12 @@ layout: default
         <!-- Published date and author -->
         <div>
           Posted
-          <span class="timeago" data-toggle="tooltip" data-placement="bottom"
-           title="{{ page.date | date: site.data.date_format.tooltip }}">
-            {{ page.date | date: site.data.date_format.post }}
-            <i class="unloaded">{{ page.date | date_to_xmlschema }}</i>
-          </span>
+          {% include timeago.html date=page.date tooltip=true %}
           by
           <span class="author">
           {% if page.author %}
             {{ page.author }}
-          {% else%}
+          {% else %}
             {{ site.author }}
           {% endif %}
           </span>
@@ -50,6 +46,19 @@ layout: default
             {{ record.lastmod | date: site.data.date_format.post }}
             <i class="unloaded">{{ record.lastmod | date_to_xmlschema}}</i>
           </span>
+
+        {% for item in site.data.updates %}
+          {% assign encode_filename = item.filename | url_encode %}
+          {% if filename == encode_filename %}
+            {% assign lastmod = item.lastmod %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if lastmod %}
+        <div>
+          Updated
+          {% include timeago.html date=lastmod class="lastmod" tooltip=true %}
         </div>
         {% endif %}
 
@@ -65,15 +74,11 @@ layout: default
 
       <div class="post-content">
         {% if page.image %}
-        <img src="{{ page.image }}">
+          <img src="{{ page.image }}">
         {% endif %}
-        <!-- Add lozad class into image tags. see: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+        <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         {% if content contains '<img src=' %}
-          {% capture loading %}
-           {{ "/assets/img/commons/loading.png" | relative_url }}
-          {% endcapture %}
-          {% assign replacement = '<img class="lozad" src=' | append: loading | append: ' data-src=' %}
-          {{ content | replace: '<img src=', replacement }}
+          {{ content | replace: '<img src=', '<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src=' }}
         {% else %}
           {{ content }}
         {% endif %}

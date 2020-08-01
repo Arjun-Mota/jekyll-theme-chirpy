@@ -39,6 +39,7 @@
 
 %heading {
   font-family: 'Josefin Sans','Titillium Web', 'Lato', 'Microsoft Yahei', sans-serif;
+  font-weight: 400;
 }
 
 %section {
@@ -49,11 +50,8 @@
 }
 
 %anchor {
-  .post-content &,
-  #page & {
-    padding-top: 3.5rem;
-    margin-top: -2.5rem;
-  }
+  padding-top: 3.5rem;
+  margin-top: -2.5rem;
 }
 
 /*---------- scss mixin ---------*/
@@ -62,8 +60,8 @@
   text-decoration: none;
 }
 
-@mixin sidebar-icon {
-  color: rgba(255, 255, 255, 0.5);
+@mixin sidebar-links($color: rgba(255, 255, 255, 0.5)) {
+  color: $color;
   transition: color 0.35s ease-in-out;
   user-select: none;
   margin: 0 .25rem;

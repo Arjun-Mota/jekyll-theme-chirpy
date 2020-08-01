@@ -1,14 +1,14 @@
 ---
+# Post-specific style
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2019 Cotes Chung
+# MIT License
 ---
-/*!
-  Post-specific style
-  v2.0
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2019 Cotes Chung
-  MIT License
-*/
-@import "_addon/variables";
-@import "_addon/module";
+
+
+{% include_relative _addon/main.scss %}
+{% include_relative _addon/syntax.scss %}
 
 $prompt-older: "{{ site.data.label.post.button.previous }}";
 $prompt-newer: "{{ site.data.label.post.button.next }}";
@@ -31,17 +31,17 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
   @include semi-bold;
 }
 
-.post img {
-  margin-top: .5rem;
-  margin-bottom: 1.5rem;
-  max-width: 100%;
-  height: auto;
-  // filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.08));
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+.post {
+  img {
+    max-width: 100%;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }
 
 .post-tail-wrapper {
@@ -56,7 +56,7 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
 
 .post-navigation {
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 
   .btn {
     @include btn-post-nav;
@@ -127,6 +127,7 @@ $prompt-newer: "{{ site.data.label.post.button.next }}";
 }
 
 #toc-wrapper {
+  margin-top: 7rem;
   border-left: 1px solid rgba(158, 158, 158, 0.17);
   position: -webkit-sticky;
   position: sticky;

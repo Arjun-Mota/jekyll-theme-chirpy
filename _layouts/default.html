@@ -9,13 +9,19 @@ layout: compress
 
 <!DOCTYPE html>
 
+{% if site.lang %}
+  {% assign lang = site.lang | split: "_" | first %}
+{% else %}
+  {% assign lang = 'en' %}
+{% endif %}
+
 {% capture prefer_mode %}
   {% if site.theme_mode != "dual" %}
     mode="{{ site.theme_mode }}"
   {% endif %}
 {% endcapture %}
 
-<html lang="en" {{ prefer_mode }} >
+<html lang="{{ lang }}" {{ prefer_mode }} >
 
   {% include head.html %}
 
@@ -30,15 +36,12 @@ layout: compress
     <div id="main-wrapper">
       <div id="main">
 
-        {% capture _content %}
-          {{ content }}
-        {% endcapture %}
-
-        {% include fixlinenos.html %}
-        {{ _content }}
+        {% include fixlinenos.html content=content %}
 
         {% include footer.html %}
+
       </div>
+
       {% include search-results.html %}
 
     </div> <!-- #main-wrapper -->

@@ -73,7 +73,8 @@ tag: TAG_NAME               # e.g. bee
 ---
 ```
 
-With the increasing number of posts, the number of categories and tags will increase several times!  If we still manually create these *category*/*tag* type files, it will obviously be a super time-consuming job, and it is very likely to miss some of them(i.e. when you click on the missing `category` or `tag` link from a post or somewhere, it will complain to you '404'). The good news is that we got a lovely script tool `_scripts/sh/create_pages.sh` to finish the boring task. Basically we will use it via `tools/init.sh` instead of running it separately. Check out its use case [here]({{ "/posts/getting-started/#option-1-built-by-github-pages" | relative_url }}).
+
+With the increasing number of posts, the number of categories and tags will increase several times!  If we still manually create these *category*/*tag* type files, it will obviously be a super time-consuming job, and it is very likely to miss some of them(i.e. when you click on the missing `category` or `tag` link from a post or somewhere, it will complain to you '404'). The good news is that we got a lovely script tool `_scripts/sh/create_pages.sh` to finish the boring task. Basically we will use it via `tools/publish.sh` instead of running it separately. Check out its use case [here]({{ "/posts/getting-started/#option-1-built-by-github-pages" | relative_url }}).
 
 ## Last modified date
     
@@ -113,6 +114,28 @@ comments: false
 ```
 
 
+## Mathematics
+
+For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
+
+```yaml
+---
+math: true
+---
+```
+
+
+## Pinned Posts
+
+You can pin one or more posts to the top of the home page, and the fixed posts are sorted in reverse order according to their release date. Enable by:
+
+```yaml
+---
+pin: true
+---
+```
+
+
 ## Code Block
 
 Markdown symbols <code class="highlighter-rouge">```</code> can easily create a code block as following examples.
@@ -136,7 +159,7 @@ items:
       quantity:  4
 ```
 
-#### Liquid codes
+#### Liquid Codes
 
 If you want to display the **Liquid** snippet, surround the liquid code with `{% raw %}{%{% endraw %} raw {%raw%}%}{%endraw%}` and `{% raw %}{%{% endraw %} endraw {%raw%}%}{%endraw%}` .
 
@@ -148,6 +171,8 @@ If you want to display the **Liquid** snippet, surround the liquid code with `{%
 ```
 {% endraw %}
 
+
 ## Learn More
+
 For more knowledge about Jekyll posts, visit the [Jekyll Docs: Posts](https://jekyllrb.com/docs/posts/).
 
