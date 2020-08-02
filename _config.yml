@@ -10,7 +10,7 @@
 
 title: Arjun Mota's Blog                     # the main title
 
-tagline: AI | Machine Learning | Data-Science | Big-Data | Statistical Analysis | Data Visualization | Software-Engineering | Cloud Computing | IoT | My Projects and Experiences | Misc |   # it will display as the sub-title
+tagline: AI | Machine Learning | Data-Science | Big-Data | Software-Engineering | Cloud Computing | IoT | My Projects and Experiences | Misc   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Arjun Mota's portfolio representing his 

@@ -80,33 +80,13 @@
         background-color: var(--btn-paginator-hover-color)
       }
     }
-  }
-}
-
-.page-item {
-  .page-link {
-    color: var(--btn-patinator-text-color);
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0;
-    text-align: center;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid var(--btn-paginator-border-color);
-    font-family: 'Titillium Web','Josefin Sans','Lato', sans-serif;
-    background-color: var(--button-bg);
-  }
-  &.active {
-    .page-link {
-      background-color: var(--btn-active-bg);
-      border-color: var(--btn-active-border-color);
-      box-shadow: 0 0 8px 0 var(--btn-paginator-shadow) !important;
-      color: var(--btn-text-color);
+    &.active {
+      .page-link {
+        background-color: var(--btn-active-bg);
+        border-color: var(--btn-active-border-color);
+        box-shadow: 0 0 8px 0 var(--btn-paginator-shadow) !important;
+        color: var(--btn-text-color);
+      }
     }
     &.disabled {
       cursor: not-allowed;

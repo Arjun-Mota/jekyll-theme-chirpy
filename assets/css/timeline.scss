@@ -1,11 +1,10 @@
 ---
-# Style for Archives
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
+# 'Style for Timeline'
+# 'v2.0'
+# 'https://github.com/cotes2020/jekyll-theme-chirpy'
 # © 2019 Cotes Chung
 # MIT License
 ---
-
 
 {% include_relative _addon/main.scss %}
 
@@ -16,7 +15,7 @@
   display: inline-block;
   float: left;
   position: relative;
-  background-color: var(--timeline-color);
+  background-color: var(--archives-color);
 }
 
 %date-font {
@@ -67,8 +66,8 @@
       top: -26px;
       left: 63px;
       border: 3px solid;
-      background-color: var(--timeline-year-dot-color);
-      border-color: var(--timeline-node-bg);
+      background-color: var(--archives-year-dot-color);
+      border-color: var(--archives-node-bg);
       box-shadow: 0 0 2px 0 #c2c6cc;
       z-index: 1;
     }
@@ -94,7 +93,7 @@
         float: left;
         top: 1.35rem;
         left: 69px;
-        background-color: var(--timeline-node-bg);
+        background-color: var(--archives-node-bg);
         box-shadow: 0 0 3px 0 #c2c6cc;
         z-index: 1;
       }

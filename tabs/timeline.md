@@ -1,6 +1,6 @@
 ---
 title: Timeline
-
+type: timeline
 # The Timeline of posts.
 # v2.0
 # https://github.com/cotes2020/jekyll-theme-chirpy

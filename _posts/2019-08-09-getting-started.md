@@ -36,16 +36,6 @@ $ git clone git@github.com:USER/jekyll-theme-chirpy.git -b master
 
 And replace the `USER` above to your GitHub username.
 
-## Jekyll Plugins
-
-[Fork **Chirpy** from GitHub](https://github.com/cotes2020/jekyll-theme-chirpy/fork), then clone your forked repo to local:
-
-```console
-$ git clone git@github.com:USER/jekyll-theme-chirpy.git -b master
-```
-
-and replace the `USER` above to your GitHub username.
-
 The first time you run or build the project on local machine, perform the installation of Jekyll plugins. Go to the root of repo and run:
 
 ```terminal
