@@ -187,16 +187,18 @@ $sidebar-display: "sidebar-display";
 
     a:hover, #mode-toggle-wrapper>i:hover {
       color: #fff;
+      filter: brightness(170%);
     }
 
     #mode-toggle-wrapper {
       i {
         @include sidebar-links;
         margin-right: 0;
+        color: #00aced;
         font-size: 1.05rem;
         text-align: center;
         position: relative;
-        bottom: 1px;
+        bottom: 1px;        
       }
     }
 
@@ -1441,17 +1443,17 @@ table {
       }
 
       #mode-toggle-wrapper {
-        font-size: .9rem;
+        font-size: .9rem;        
         i {
           @include icon-round(2rem);
           padding-top: .44rem;
-          bottom: 0;
+          bottom: 0;                    
         }
       }
 
       .icon-border {
         @include ml-mr(.2rem);
-        margin-top: .85rem;
+        margin-top: .85rem;        
         +a {
           margin-left: 0;
         }

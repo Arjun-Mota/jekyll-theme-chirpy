@@ -17,17 +17,24 @@ layout: default
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
+        <span>Reading time:&nbsp;</span>
+        {% assign words = content | number_of_words %}
+        {% if words < 360 %}
+        Less than 1 min
+        {% else %}
+        {{ words | divided_by:180 }} mins
+        {% endif %}&nbsp;
         <div>
           Posted
           {% include timeago.html date=page.date tooltip=true %}
-          by
-          <span class="author">
+          by <a href="https://linkedin.com/in/arjun-mota" alt="https://linkedin.com/in/arjun-mota">
+          <span class="author">            
             {% if page.author %}
             {{ page.author }}
             {% else %}
             {{ site.author }}
-            {% endif %}
-          </span>
+            {% endif %}            
+          </span></a>
         </div>
 
         <!-- lastmod -->
@@ -57,7 +64,6 @@ layout: default
           views
         </div>
         {% endif %}
-
       </div> <!-- .post-meta -->
 
       <div class="post-content">
